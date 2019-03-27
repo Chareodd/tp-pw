@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Movie } from '../home/home.page';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
   styleUrls: ['./details.page.scss'],
 })
-export class DetailsPage implements OnInit {
+export class DetailsPage {
+  movie: Movie;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    private router: Router
+  ) {
+    this.movie = router.getCurrentNavigation().extras.state as Movie;
   }
-
 }

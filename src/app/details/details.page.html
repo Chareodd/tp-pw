@@ -1,13 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Details</ion-title>
-    <ion-buttons slot="primary">
+    <ion-buttons slot="secondary">
         <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
   
 </ion-header>
 
-<ion-content padding>
-  <h1>Movie</h1>
+<ion-content padding >
+  <h1>{{ movie.title }}</h1>
+  <p>{{ movie.overview }}</p>
 </ion-content>

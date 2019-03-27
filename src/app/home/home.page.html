@@ -12,7 +12,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let movie of movies" (click)="showDetails(movie)">
+    <ion-item *ngFor="let movie of movies | async" (click)="showDetails(movie)">
         {{ movie.title }}
     </ion-item>
   </ion-list>

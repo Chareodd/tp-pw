@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { apiKey } from 'src/tmdb';
 
-interface Movie {
+export interface Movie {
   backdrop_path: string;
   id: number;
   overview: string;
@@ -38,7 +38,7 @@ export class HomePage {
   }
 
   private searchMovies(search: string): Promise<Movie[]> {
-    return this.askTMDB('search', search) ;
+    return this.askTMDB('search', {query: search}) ;
   }
 
   getMovies(input: string): void {
@@ -50,6 +50,6 @@ export class HomePage {
   }
 
   showDetails(movie: Movie): void {
-    this.router.navigate(['/details']) ;
+    this.router.navigate(['/details'], {state: movie}) ;
   }
 }
