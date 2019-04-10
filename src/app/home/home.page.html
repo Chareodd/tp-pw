@@ -4,7 +4,7 @@
       Home
     </ion-title>
     <ion-buttons slot="primary">
-      <ion-button color="primary">Random</ion-button>
+      <ion-button color="primary" (click)="getRandomMovie()">Random</ion-button>
     </ion-buttons>
   </ion-toolbar>
   <ion-searchbar (ionChange)="getMovies($event.target.value)"></ion-searchbar>

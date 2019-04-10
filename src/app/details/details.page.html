@@ -9,6 +9,9 @@
 </ion-header>
 
 <ion-content padding >
-  <h1>{{ movie.title }}</h1>
+  <h1>{{ movie.title }}</h1>     
+  <h3>{{ movie.release_date | date:'fullDate' }}</h3>
+  <ion-img [src]="getImageUrl(movie.backdrop_path)"></ion-img>
   <p>{{ movie.overview }}</p>
+  <ion-img [src]="getImageUrl(movie.poster_path)"></ion-img>
 </ion-content>

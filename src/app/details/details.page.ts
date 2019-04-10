@@ -15,4 +15,8 @@ export class DetailsPage {
   ) {
     this.movie = router.getCurrentNavigation().extras.state as Movie;
   }
+
+  getImageUrl(image: string): string {
+    return `https://image.tmdb.org/t/p/w780${image}`;
+  }
 }
